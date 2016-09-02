@@ -1,0 +1,74 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+{{ content }}
+<section id="form">
+    <h1>TA<span id="dash-one">&ndash;</span>PE<span id="dash-two">&ndash;</span>TY</h1>
+	<h2>Registrační formulář</h2>
+	<span class="required-alert">Pole označená * jsou povinná</span>
+    {% include "forms/form.html.twig" %}
+</section>
+
+
+{#    
+    <section id="form">
+	<h1>Ta&ndash;pe&ndash;ty</h1>
+	<h2>Registrační formulář</h2>
+	<form autocomplete="on">
+		<div class="input-field cf">
+			<label>Jméno</label>
+			<input type="text">
+		</div>
+		<div class="input-field cf">
+			<label>Příjmení</label>
+			<input type="text">
+		</div>
+		<div class="input-field cf">
+			<label>E-mail</label>
+			<input type="email">
+		</div>
+		<div class="input-field margin cf">
+			<label>Telefon</label>
+			<input type="tel">
+		</div>
+		<div class="input-field cf">
+			<label>Název tapety</label>
+			<input type="text">
+		</div>
+		<div class="input-field cf">
+			<label>Kategorie</label>
+			<div class="selectbox">
+				<select>
+					<option value="value1">Value 1</option> 
+					<option value="value2">Value 2</option>
+					<option value="value3">Value 3</option>
+				</select>
+			</div>
+		</div>
+		<div class="input-field cf">
+			<label>Popis (max.&nbsp;500&nbsp;znaků)</label>
+			<textarea rows="8"></textarea>
+		</div>
+		<div class="input-field margin cf">
+			<div class="upload">
+				<div class="upload-btn">
+					<span>Nahrát soubor</span>
+					<input id="uploadBtn" type="file" />
+				</div>
+				<input id="uploadFile" placeholder="" disabled="disabled" />
+			</div>
+		</div>
+		<div class="input-field margin cf">
+			<div class="checkbox">
+				<input type="checkbox" id="agreement">
+				<label for="agreement">Souhlasím s <a href="#" target="_blank">pravidly soutěže</a>.</label>
+			</div>
+		</div>
+		<div class="input-field margin cf">
+			<input class="btn" type="submit" value="Přihlásit">
+		</div>
+	</form>
+</section>
+#}
+{% endblock %}

@@ -1,0 +1,20 @@
+{# 
+Základní button funkce
+
+Příklad: 
+{{ button('Název tlačítka','small art inverted') }} 
+
+Možné classy:
+small / medium / large
+art / stage / lab / cutsew / coffee / core / garden
+inverted
+borderless
+shadow
+
+#}
+
+{% macro button(text, class) %}
+	<a class="button inverted {{ class }}" href="#">
+		<div class="content"><span>{{ text }}</span></div>
+	</a>
+{% endmacro %}

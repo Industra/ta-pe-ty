@@ -1,0 +1,11 @@
+email: mail@floriankarsten.com
+fullname: 'Big Dada'
+title: Dada
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$L7PvRZWuICcptxMLpA7mee0vaTu0Bqt5UpB.R7skokP6J/MGD1RLe

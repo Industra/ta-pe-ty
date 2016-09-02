@@ -1,0 +1,17 @@
+title: Event
+'@extends':
+    type: default_parent
+    context: blueprints://
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Event
+          fields:
+            uploads:
+              type: pagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA

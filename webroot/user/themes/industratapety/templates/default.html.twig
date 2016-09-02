@@ -1,0 +1,70 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block content %}
+<section id="head">
+	<img src="{{ url('theme://images/ta-pe-ty-open-call.jpg') }}" alt="TA-PE-TY OPEN-CALL" title="TA-PE-TY OPEN-CALL">
+	<!--<a class="btn" href="#">English</a>-->
+</section>
+
+<section id="content">
+	<h1>TA<span id="dash-one">&ndash;</span>PE<span id="dash-two">&ndash;</span>TY</h1>
+	<h2>Vyhlašujeme 1.&nbsp;ročník soutěže o&nbsp;nejlepší návrhy autorských designových tapet</h2>
+
+	<p>Soutěž, ve které se vy, autoři, můžete soustředit jen na kreativní proces a&nbsp;my se postaráme o&nbsp;všechno ostatní. Vítězné návrhy sestavíme do prodejní kolekce, jejíž prodej bude spojen s&nbsp;podílem autora na zisku z&nbsp;prodeje. Organizátor soutěže zároveň zaštítí propagaci a&nbsp;je odpovědný za veškerou exekutivu spojenou s&nbsp;výrobou a samotným prodejem.</p>
+
+	<p>Soutěž je určena profesionálním grafickým a&nbsp;produktovým designerům, ilustrátorům, architektům, umělcům a&nbsp;studentům vysokých i&nbsp;středních škol s&nbsp;uměleckým zaměřením v&nbsp;ČR i&nbsp;zahraničí. Autorem projektu je brněnská kreativní továrna INDUSTRA, odborným partnerem pro rok 2016 se stal designSUPERMARKET. Výrobním partnerem kolekce je brněnská tiskárna CATCUT.</p>
+
+	<p>Vítězné návrhy budou představeny veřejnosti na desátém ročníku designSUPERMARKETU 2016 v&nbsp;Kafkově domě v&nbsp;Praze a&nbsp;stanou se součástí kolekce realizované ve spolupráci s&nbsp;tiskárnou CATCUT. Autoři vítězných návrhů budou odměněni podílem ze zisku z&nbsp;prodeje jednotlivých tapet.</p>
+
+	<p>Soutěžní návrhy lze přihlásit do jedné ze tří kategorií:</p>
+
+	<h3>KLASIK</h3>
+	<p>Univerzální tapety, např. opakující se vzor, geometrický vzor, základní kategorie, basic</p>
+
+	<h3>KONCEPT</h3>
+	<p>Přesahující klasický formát tapety, např. tapety vyžadující speciální instalaci nebo interakci s&nbsp;uživateli</p>
+
+	<h3>KIDS</h3>
+	<p>Tapety vhodné do dětského interiéru, bez věkového omezení</p>
+
+	<h2>DEADLINE<br>
+	12.&nbsp;10.&nbsp;2016</h2>
+
+	<div class="btn-container">
+		<a class="btn" href="{{ page.media['TA-PE-TY-Pravidla_souteze.pdf'].url }}"><strong>PDF</strong> Pravidla soutěže</a>
+		<a class="btn" href="{{ page.media['TA-PE-TY-Technicke_parametry.pdf'].url }}"><strong>PDF</strong> Technické parametry</a>
+		<a class="btn" href="/prihlasit-se">Přihláška</a>
+	</div>
+
+	<p>TA–PE–TY je nový projekt zaměřený na mladé české i&nbsp;zahraniční designéry na jedné straně a&nbsp;na širší veřejnost na straně druhé. Skrze kolekce autorských designových tapet chce v&nbsp;první fázi přinést design do českých interiérů. Prostřednictvím pečlivě vybraných soutěžních návrhů, které se stanou základem prodejní kolekce, se tak snaží přibližovat profesionální design širší veřejnosti.</p>
+
+	<p>Projekt TA–PE–TY vyhlášením soutěže nekončí, ale začíná. Naším záměrem je budování fair-trade projektu, který je schopný dlouhodobě úšpěšně fungovat i&nbsp;v&nbsp;komerčním prostředí.</p>
+
+	<h3>KONTAKT</h3>
+	<p>Jakub&nbsp;Konvica<br>
+	INDUSTRA&nbsp;BRNO<br>
+	<a href="mailto:jkonvica@gmail.com">jkonvica@gmail.com</a><br>
+	+420&nbsp;776&nbsp;345&nbsp;267</p>
+	
+	<div class="logo-container">
+		<div class="logo">
+			<span>Organizátor</span>
+			<img src="{{ url('theme://images/logo-industra.png') }}" alt="Organizátor: INDUSTRA" title="Organizátor: INDUSTRA">
+		</div>
+		<div class="logo">
+			<span>Odborný partner</span>
+			<img src="{{ url('theme://images/logo-dsm.png') }}" alt="Odborný partner: DESIGN SUPERMARKET" title="Odborný partner: DESIGN SUPERMARKET">
+		</div>
+		<div class="logo">
+			<span>Výrobní partner</span>
+			<img src="{{ url('theme://images/logo-catcut.png') }}" alt="Výrobní partner: CATCUT" title="Výrobní partner: CATCUT">
+		</div>
+	</div>
+</section>
+
+<section id="foot">
+	<img src="{{ url('theme://images/deadline-12-10-2016.jpg') }}" alt="Deadline 12/10/2016" title="Deadline 12/10/2016">
+</section>
+
+{% endblock %}

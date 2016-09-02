@@ -1,0 +1,334 @@
+@import "_import";
+
+* {
+	box-sizing: border-box;
+}
+
+// CLEARFIX
+.cf:before, .cf:after, figure:before, figure:after { content: " "; display: table; }
+.cf:after, figure:after { clear: both; }
+.cf, figure { *zoom: 1; }
+
+// CLEARFIX FORM FIELD
+.form-field:before, .form-field:after, figure:before, figure:after { content: " "; display: table; }
+.form-field:after, figure:after { clear: both; }
+.form-field, figure { *zoom: 1; }
+
+$text: black;
+$back: #e5e5e5;
+
+html {
+	font-size: 14px;
+	@include min-screen(768px) {
+		font-size: 15px;
+	}
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 1rem;
+	line-height: 1.35em;
+	font-weight: 400;
+	color: $text;
+	background: $back;
+}
+
+a {
+	color: $text;
+	text-decoration: underline;
+	transition: color 250ms, background 250ms;
+
+	&:hover {
+		color: lighten($text, 50%);
+	}
+}
+
+b, em, strong {
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	line-height: 1em;
+	letter-spacing: 0.075em;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+
+	span {
+		position: relative;
+		display: inline-block;
+		top: -2px;
+
+		&#dash-one {
+			margin-left: -1px;
+		}
+
+		&#dash-two {
+			margin-right: -1px;
+		}
+	}
+}
+
+h2 {
+	font-size: 2.55rem;
+	line-height: 1.25em;
+	font-weight: 700;
+	margin-bottom: 1em;
+	text-align: center;
+	max-width: 16em;
+	margin: 1.5em auto;
+}
+
+h1 + h2 {
+	margin-top: 0.375em;
+}
+
+h3 {
+	max-width: 35em;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+p, ul, ol {
+	max-width: 35em;
+	margin: 0 auto 1.35rem auto;
+}
+
+span.required-alert {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: -3rem auto 3rem auto;
+
+	@include min-screen(768px) {
+		max-width: 35rem;
+	}
+}
+
+a.btn,
+input.btn,
+button {
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 1em;
+	letter-spacing: 0.025em;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0.75rem 1rem;
+	border: 1px solid $text;
+	border-radius: 1.25rem;
+	margin: 0.5rem;
+	background: $back;
+	cursor: pointer;
+
+	&:hover {
+		color: $back;
+		background: $text;
+	}
+}
+
+#head, #foot {
+	position: relative;
+
+	img {
+		display: block;
+		width: 120vh;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	a.btn {
+		position: absolute;
+		top: 0.25rem;
+		right: 0.25rem;
+	}
+}
+
+#content {
+	margin: 3rem auto 3rem auto;
+	padding: 0 10px;
+
+	.btn-container {
+		text-align: center;
+		font-size: 0;
+		margin-bottom: 5rem;
+	}
+
+	.logo-container {
+		text-align: center;
+		font-size: 0;
+		margin-top: 5rem;
+
+		div.logo {
+			display: block;
+			margin: 0 30px 20px 30px;
+
+			@include min-screen(680px) {
+				display: inline-block;
+			}
+
+			span {
+				display: none;
+				font-size: 1rem;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			img {
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+#form {
+	margin: 3rem auto 4.5rem auto;
+	padding: 0 10px;
+
+	div.alert.notices {
+		max-width: 35rem;
+		margin: 0 auto 3rem auto;
+		&.red {
+			text-align: center;
+			color: red;
+		}
+	}
+
+	.form-field {
+		max-width: 35rem;
+		margin: 0 auto 0.75rem auto;
+
+		&.margin {
+			margin-bottom: 3.5rem;
+		}
+
+		.form-label {
+			display: block;
+			width: 100%;
+			margin: 0 0 0.5rem 0.15rem;
+
+			@include min-screen(768px) {
+				float: left;
+				width: 25%;
+				margin: 0.75rem 0 0 0;
+			}
+
+			label {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		input, textarea, select {
+			display: block;
+			width: 100%;
+
+			@include min-screen(768px) {
+				float: left;
+				width: 75%;
+			}
+
+			font-family: 'Helvetica', 'Arial', sans-serif;
+			font-size: 1rem;
+			line-height: 1rem;
+			color: $text;
+			background: $back;
+			border: 1px solid $text;
+			border-radius: 1.25rem;
+			padding: 0.75rem 1rem;
+			margin: 0;
+
+			&.btn {
+				width: auto;
+				float: none;
+				margin: 0 auto;
+				transition: color 250ms, background 250ms;
+				color: $back;
+				background: $text;
+			}
+
+			&.btn:hover {
+				color: $back;
+				background: $text;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		textarea {
+			line-height: 1.35rem;
+			resize: none;
+		}
+		
+		input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+			margin-right: 10px;
+			vertical-align: middle;
+			margin-top: 3px;
+		}
+
+		input[type="file"] {
+			font-family: "Helvetica", "Arial", sans-serif;
+			font-size: 12px;
+		}
+
+		.form-select-wrapper {
+			position: relative;
+			width: 100%;
+
+
+			@include min-screen(768px) {
+				float: left;
+				width: 75%;
+			}
+
+			&:after {
+				content: url("../assets/images/arrow.svg");
+				display: block;
+				position: absolute;
+				width: 1.5rem;
+				height: 1.5rem;
+				top: 0.525rem;
+				right: 0.5rem;
+				pointer-events: none;
+			}
+
+			select {
+				width: 100%;
+				float: none;
+				line-height: 1.5rem;
+				padding: 0.5rem 1rem;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.buttons {
+		max-width: 35rem;
+		margin: 3.5rem auto;
+		text-align: center;
+
+		button {
+			display: inline-block;
+			font-family: "Helvetica", "Arial", sans-serif;
+			color: $back;
+			background: $text;
+			transition: all 250ms;
+			margin: 0;
+
+			&:hover {
+				color: $text;
+				background: $back;
+			}
+		}
+	}
+}
